@@ -1,0 +1,183 @@
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+body {
+  font-family: "Play";
+  font-weight: 400; }
+
+a.button {
+  font-family: 'Play', 'Arial', 'Serif';
+  font-weight: 400;
+  font-size: 1.5em;
+  color: black;
+  text-decoration: none;
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 5px;
+  margin: .5em;
+  background-color: red; }
+
+@extends a.button;
+div.head-container {
+  background-color: orange;
+  width: 100%;
+  height: 100px; }
+  div.head-container header {
+    margin: 0 auto;
+    height: 100px;
+    background-color: green;
+    width: 80%; }
+    div.head-container header nav {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
+      div.head-container header nav .logo {
+        margin-top: .15em;
+        font-family: 'Orbitron', 'Arial', 'Serif';
+        font-weight: 900;
+        font-size: 3.5em;
+        color: black;
+        text-decoration: none;
+        background-color: blue; }
+      div.head-container header nav a {
+        display: inline-block; }
+
+div.foot-container {
+  background-color: purple;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  div.foot-container footer {
+    width: 80%;
+    height: 70%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    background: white;
+    bottom: 0; }
+    div.foot-container footer .copyright {
+      margin-right: 20px; }
+    div.foot-container footer .contact {
+      position: absolute;
+      right: 10px;
+      top: 18px; }
+    div.foot-container footer .disclaimer {
+      font-size: .6em;
+      position: absolute;
+      left: 2px;
+      bottom: 2px; }
+
+div.carousel-container {
+  height: 450px;
+  width: 100%;
+  background-color: purple; }
+  div.carousel-container .carousel {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+  div.carousel-container h1 {
+    margin: 0;
+    text-align: center; }
+  div.carousel-container .carousel-content {
+    background-color: cyan; }
+    div.carousel-container .carousel-content > * {
+      display: block;
+      margin: 15px; }
+  div.carousel-container div.buttons {
+    text-align: center; }
+    div.carousel-container div.buttons .button {
+      margin-top: 10em; }
+
+.about-container {
+  width: 100%;
+  background-color: green;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative; }
+  .about-container .about {
+    width: 80%;
+    background-color: yellow; }
+    .about-container .about .content-container {
+      display: flex;
+      flex-direction: row;
+      background-color: teal; }
+      .about-container .about .content-container .content {
+        flex: 1;
+        position: relative; }
+        .about-container .about .content-container .content p {
+          position: absolute;
+          top: 90px;
+          left: 80px;
+          right: 80px;
+          background-color: gray; }
+      .about-container .about .content-container .images {
+        display: flex;
+        flex-direction: column; }
+        .about-container .about .content-container .images img {
+          width: 200px;
+          height: 150px;
+          background-color: blue; }
+  .about-container h1 {
+    background-color: orange;
+    display: block;
+    margin: 0; }
+
+.list-container {
+  min-height: 300px;
+  width: 100%;
+  background-color: yellow;
+  overflow: hidden; }
+  .list-container main {
+    width: 80%;
+    margin: auto; }
+  .list-container .media-object {
+    background-color: blue;
+    margin: 10px 0px; }
+    .list-container .media-object .graphic {
+      background-color: green;
+      height: 100px;
+      width: 100px;
+      float: left; }
+    .list-container .media-object .content {
+      background-color: red;
+      margin-left: 105px;
+      min-height: 100px; }
+
+.content-container {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  min-height: 800px; }
+  .content-container .user {
+    background-color: yellow;
+    width: 80%;
+    position: relative;
+    overflow: hidden; }
+    .content-container .user .profile-img {
+      background-color: blue;
+      height: 200px;
+      width: 200px;
+      float: left; }
+    .content-container .user .about-me {
+      background-color: red;
+      margin: 20px 20px 20px 215px;
+      display: block; }
+      .content-container .user .about-me div.bio {
+        display: block;
+        margin-top: 20px;
+        margin-left: 25px;
+        margin-right: 25px; }

@@ -42,6 +42,9 @@ class Registrar implements RegistrarContract {
 			'play_style' => $data['play_style'],
 			'date_of_birth' => $data['date_of_birth']
 		]);
+		// $u->play_style = $data['play_style'];
+		// dd($u);
+		// return $u;
 	}
 
 }

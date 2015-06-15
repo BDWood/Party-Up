@@ -12,11 +12,12 @@ create table user (
     play_style varchar(255),
     remember_token varchar(255),
     image varchar(255),
+    bio text,
     created_at datetime,
     updated_at datetime
 );
 
-create table game_plays (
+create table friends (
     id int auto_increment primary key,
     user_id int,
     friend_user_id int,
@@ -26,6 +27,7 @@ create table game_plays (
 
 create table game (
     id int auto_increment primary key,
+    console_id int,
     name varchar(255),
     image varchar(255)
 );
@@ -42,4 +44,9 @@ create table user_games (
     game_id int,
     active tinyint(1),
     date datetime
+);
+
+create table console (
+    id int auto_increment primary key,
+    name varchar(255)
 );

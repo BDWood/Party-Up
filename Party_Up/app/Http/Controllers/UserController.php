@@ -1,7 +1,7 @@
 <?php 
 namespace App\Http\Controllers;
+use App\Models\User;
 use Auth;
-use App\Models;
 use Request;
 
 
@@ -11,7 +11,7 @@ use Request;
     uses Brad and Daniel's model.
 **********************************************/
 
-class UserController extends Model {
+class UserController extends Controller {
 
     public function view() {
         if (!Auth::check()) {
@@ -43,15 +43,17 @@ class UserController extends Model {
 
     public function edit($id) {
         $user = new User($id);
-        return view('edit_user');
+        return view('user_edit', ['user' => $user]);
     }
 
     public function postEdit($id) {
         $user = new User($id);
-        $user->username = Request::get('username');
-        $user->first_name = Request::get('first_name');
-        $user->last_name = Request::get('last_name');
+        $user->image = Request::get('image');
         $user->email = Request::get('email');
+        $user->date_of_birth = Request::get('date_of_birth');
+        $user->bio = Request::get('bio');
+        $user->play_style = Request::get('play_style');
+        $user->region = Request::get('region');
         $user->save();
         return redirect('user');
     }

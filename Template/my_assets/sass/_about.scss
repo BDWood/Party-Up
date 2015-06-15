@@ -1,0 +1,53 @@
+.about-container {
+    width: 100%;
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+        .about {
+            width: 80%;
+            background-color: yellow;
+        
+            .content-container {
+                display: flex;
+                flex-direction: row;
+                background-color: teal;
+
+                .content {
+                    flex: 1;
+                    position: relative;
+
+                    p {
+                        position: absolute;
+                        top: 90px;
+                        left: 80px;
+                        right: 80px;
+                        background-color: gray;
+                    }
+                }
+                
+                .images {
+                    display: flex;
+                    flex-direction: column;
+
+                    img {
+                        width: 200px;
+                        height: 150px;
+                        background-color: blue;
+                    }
+                }
+            }
+        }
+
+        h1 {
+            background-color: orange;
+            // position: absolute;
+            display: block;
+            margin: 0;
+        }
+
+
+}

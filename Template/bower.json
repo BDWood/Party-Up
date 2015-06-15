@@ -1,15 +1,22 @@
 {
-    "name": "Party-Up",
-    "version": "0.0.0",
-    "homepage": "https://github.com/BDWood/Party-Up",
-    "license": "MIT",
-    "ignore": [
-        "**/.*",
-        "node_modules",
-        "bower_components",
-
-    ],
-    "dependencies": [
-        
-    ]
+  "name": "awesomeness",
+  "version": "0.0.0",
+  "authors": [
+    "Brad Westfall <brad@azpixels.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "handlebars": "~3.0.3",
+    "font-awesome": "~4.3.0",
+    "slick": "*",
+    "normalize.css": "~3.0.3"
+  }
 }

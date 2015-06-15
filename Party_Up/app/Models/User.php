@@ -1,13 +1,12 @@
 <?php
 namespace App\Models;
-
 use DB;
 
 class User extends Model {
-    protected static $table = 'item';
+    protected static $table = 'user';
+
 
     public function delete() {
-        DB::delete('delete from item where id = ?', [$this->id]);
+        DB::delete('delete from user where id = ?' [$this->id]);
     }
-
 }

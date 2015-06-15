@@ -11,7 +11,9 @@
 |
 */
 
-Route::get('/', 'WelcomeController@index');
+Route::get('/', function() {
+    return redirect('home');
+});
 
 Route::get('home', 'HomeController@index');
 
@@ -19,3 +21,12 @@ Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
 ]);
+
+/**********************************************
+    Account Routes
+**********************************************/
+
+Route::get('auth/register', 'UserController@create');
+Route::get('user', 'UserController@view');
+Route::get('user/{id}/edit', 'UserController@edit');
+Route::post('user/{id}/edit', 'UserController@postEdit');

@@ -1,0 +1,42 @@
+.content-container {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    min-height:800px;
+
+    .user {
+        background-color: yellow;
+        width: 80%;
+        position: relative;
+        overflow: hidden;
+
+
+        .profile-img {
+            background-color: blue;
+            height: 200px;
+            width: 200px;
+            float: left;
+            
+        }
+
+        .about-me {
+            background-color: red;
+            margin: 20px 20px 20px 215px;
+            display: block;
+
+            // div {
+            //     color: gray;
+            //     display: block;
+            //     margin-top: 10px;
+            // }
+
+            div.bio {
+                display: block;
+                margin-top: 20px;
+                margin-left: 25px;
+                margin-right: 25px;
+            }
+
+        }
+    }
+}

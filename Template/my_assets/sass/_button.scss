@@ -1,0 +1,16 @@
+a.button {
+    font-family: 'Play', 'Arial', 'Serif';
+    font-weight: 400;
+    font-size: 1.5em;
+    color: black;
+    text-decoration: none;
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 5px;
+    margin: .5em;
+    background-color: red;
+}
+
+button {
+    @extends a.button;
+}
