@@ -14,7 +14,7 @@
                     <a href="/home" class="logo">Party-Up</a>
                     @if (Auth::check())
                         <a class="button" href="/search">Search Players</a>
-                        <a class="button" href="/archive/{id}">My Archive</a>
+                        <a class="button" href="/archive">My Archive</a>
                         <a class="button" href="/user">My Account</a>
                         <a class="button" href="/auth/logout">Logout</a>
                     @endif
