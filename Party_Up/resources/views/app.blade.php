@@ -11,12 +11,12 @@
         <div class="head-container">
             <header>
                 <nav>
-                    <a href="home" class="logo">Party-Up</a>
+                    <a href="/home" class="logo">Party-Up</a>
                     @if (Auth::check())
-                        <a class="button" href="">Search Players</a>
-                        <a class="button" href="">My Archive</a>
-                        <a class="button" href="user">My Account</a>
-                        <a class="button" href="auth/logout">Logout</a>
+                        <a class="button" href="/search">Search Players</a>
+                        <a class="button" href="/archive/{id}">My Archive</a>
+                        <a class="button" href="/user">My Account</a>
+                        <a class="button" href="/auth/logout">Logout</a>
                     @endif
                     @if (!Auth::check())
                     <div>    

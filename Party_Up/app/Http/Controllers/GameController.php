@@ -7,7 +7,9 @@ use Request;
 
 class GameController extends Controller {
 
-    
+    public function view() {
+        
+    }
 
-    
+
 }

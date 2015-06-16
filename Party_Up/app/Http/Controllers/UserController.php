@@ -76,6 +76,11 @@ class UserController extends Controller {
         return redirect('home');
     }
 
+    public function archive() {
+        $user = new User();
+        return view('archive', ['user' => $user]);
+    }
+
     /**********************************************
         logging in and logging out functionality
         using Laravel.

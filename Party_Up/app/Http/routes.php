@@ -30,3 +30,12 @@ Route::get('auth/register', 'UserController@create');
 Route::get('user', 'UserController@view');
 Route::get('user/{id}/edit', 'UserController@edit');
 Route::post('user/{id}/edit', 'UserController@postEdit');
+Route::get('archive/{id}', 'UserController@archive');
+
+/**********************************************
+    Search Routes
+**********************************************/
+
+Route::get('search', function() {
+    return view('search');
+});
