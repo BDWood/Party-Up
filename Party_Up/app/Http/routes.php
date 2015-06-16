@@ -45,3 +45,4 @@ Route::get('search', function() {
 **********************************************/
 
 Route::get('archive', 'FriendController@showFriends');
+Route::get('archive_user', 'FriendControllet@showFriend');

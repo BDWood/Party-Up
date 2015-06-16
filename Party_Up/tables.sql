@@ -159,6 +159,15 @@ INSERT INTO console (name)
     ('pc');
 
 
+/**********************************************
+    The below SQL statement selects 8 
+    columns, the age, username, game name,
+    console, playstyle of the user,
+    region of the user, the activity to be
+    played and only selects things if the
+    User is active in that game. If they 
+    aren't they shouldn't be shown.
+**********************************************/
 
 
 SELECT datediff(now(), date_of_birth)/365 as age, username, game.name, console.name, 
@@ -173,7 +182,11 @@ SELECT datediff(now(), date_of_birth)/365 as age, username, game.name, console.n
     user_game.active = 1 and
     game_activity.id = 1;
 
-
+/**********************************************
+    May or may not use this SQL statement
+    it's current purpose is going to be to
+    select the user's friends.
+**********************************************/
 
 SELECT * FROM 
     user, friend
