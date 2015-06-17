@@ -11,7 +11,7 @@ use Request;
 **********************************************/
 
 
-class GameController extends Controller {
+class SearchController extends Controller {
 
     public function view() {
         
