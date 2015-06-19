@@ -29,19 +29,19 @@
             <div>
                 Age: <select name="age">
                     <option value=""></option>
-                    <option value="1">Adult</option>
+                    <option value="age">Adult(18 and up)</option>
                 </select>
             </div>
             <div>
                 Region: <select name="region">
                     <option value=""></option>
                     <option value="usa">USA</option>
-                    <option value="usa">China</option>
-                    <option value="usa">Russia</option>
-                    <option value="usa">Mexico</option>
-                    <option value="usa">Canada</option>
-                    <option value="usa">UAE</option>
-                    <option value="usa">Australia</option>
+                    <option value="china">China</option>
+                    <option value="russia">Russia</option>
+                    <option value="mexico">Mexico</option>
+                    <option value="canada">Canada</option>
+                    <option value="uae">UAE</option>
+                    <option value="australia">Australia</option>
                 </select>
             </div>
             <div>

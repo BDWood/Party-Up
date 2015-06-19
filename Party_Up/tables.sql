@@ -136,7 +136,7 @@ INSERT INTO user_game (user_id, game_id, active)
     (1, 1, 1),
     (1, 7, 0),
     (2, 1, 0),
-    (2, 4, 1),
+    (2, 4, 0),
     (3, 1, 1),
     (3, 7, 0);
     -- (4, 1, 0),
@@ -172,15 +172,16 @@ INSERT INTO console (name)
 
 SELECT datediff(now(), date_of_birth)/365 as age, username, game.name, console.name, 
     play_style, region, game_activity.activity, user_game.active FROM
-    user, console, game, user_game, game_activity 
+    user, game, user_game, game_activity 
     WHERE 
     user.id = user_game.user_id and
     game.id = user_game.game_id and
-    console.id = game.console_id and
     game.id = game_activity.game_id and
-    console.id = 1 and 
     user_game.active = 1 and
-    game_activity.id = 1;
+    game_activity.id = :activity and
+    datediff(now(), date_of_birth)/365 >= 18 and
+    game.id = :game_id;
+
 
 /**********************************************
     May or may not use this SQL statement
