@@ -23,7 +23,6 @@
                         <a href="/auth/login" class="button">Login</a>
                         <a href="/auth/register" class="button">Sign Up</a>
                     </div>
-                    @else
                     @endif
                 </nav>
             </header>

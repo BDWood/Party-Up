@@ -1,14 +1,14 @@
 <?php 
 namespace App\Http\Controllers;
-use App\Models\User;
+use App\User;
 use Auth;
 use Request;
+use App\Models\Game;
 
 
 /**********************************************
     This Controller Uses Laravel's login,
-    logout and register functionality, and
-    uses Brad and Daniel's model.
+    logout and register functionality.
 **********************************************/
 
 class UserController extends Controller {
@@ -18,7 +18,20 @@ class UserController extends Controller {
             return redirect('auth/login');
         } 
         $user = Auth::user();
-        return view('user', ['user' => $user]);
+
+        $games = $user->games;
+
+        return view('user', ['user' => $user, 'games' => $games]);
+    }
+
+    public function postActivityStatus($id) {
+        $user = User::find($id);
+        $active = Game::find();
+        if ($active == 0) {
+            $user->games()->where('active', '=', '1')->save($active);
+        }
+        $user->games()->save($active);
+        return redirect('post');
     }
 
     /**********************************************
@@ -32,9 +45,9 @@ class UserController extends Controller {
         return view('auth/register');
     }
 
-    public function postCreate() {
-        return redirect('home');
-    }
+    // public function postCreate() {
+    //     return redirect('home');
+    // }
 
     /**********************************************
         This Uses Laravel's register functionality
@@ -42,12 +55,17 @@ class UserController extends Controller {
     **********************************************/
 
     public function edit($id) {
-        $user = new User($id);
+        
+        if(!Auth::check()) {
+            return redirect('home');
+        }
+
+        $user = User::find($id);
         return view('user_edit', ['user' => $user]);
     }
 
     public function postEdit($id) {
-        $user = new User($id);
+        $user = User::find($id);
         $user->image = Request::get('image');
         $user->email = Request::get('email');
         $user->date_of_birth = Request::get('date_of_birth');
@@ -67,6 +85,29 @@ class UserController extends Controller {
             passwords
     **********************************************/
 
+    public function addGames($id) {
+        if (!Auth::check()) {
+            return redirect('home');
+        }
+        $user = User::find($id);
+        $games = Game::all();
+        return view('games', ['user' => $user, 'games' => $games]);
+    }
+
+    public function postAddGames($id) {
+        $user = User::find($id);
+        $game = Game::find(Request::get('game'));
+        $user->games()->save($game);
+        // $user->games->console = Request::get('console');
+        $user->save();
+        return redirect('user');
+    }
+
+    /**********************************************
+        To add games and consoles to your user
+        profile for active.
+    **********************************************/
+
     public function login() {
         return view('auth/login');
     }
@@ -75,15 +116,22 @@ class UserController extends Controller {
         Auth::logout();
         return redirect('home');
     }
+    
+    /**********************************************
+        logging in and logging out functionality
+        using Laravel.
+    **********************************************/
 
     public function archive() {
+        if (!Auth::check()) {
+            return redirect('home');
+        }
         $user = new User();
         return view('archive', ['user' => $user]);
     }
 
     /**********************************************
-        logging in and logging out functionality
-        using Laravel.
+        Eventually goes to Friends page. 
     **********************************************/
 
 }

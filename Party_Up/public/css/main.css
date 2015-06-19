@@ -134,6 +134,9 @@ div.carousel-container {
     background-color: orange;
     display: block;
     margin: 0; }
+  .about-container .inactive {
+    margin:5px; 
+    font-weight: 600; }
 
 .list-container {
   min-height: 300px;

@@ -6,7 +6,7 @@
     <h1>Your Friends List</h1>
     <main>
         
-        @foreach($user as $u) 
+        {{-- @foreach($user as $u)  
             <div class="media-object">
                 <div class="graphic">
                     {{ $u->image }}
@@ -30,7 +30,7 @@
                     </table>
                 </div>
             </div>
-        @endforeach
+        @endforeach--}}
         <div class="media-object">
             <div class="graphic">
                 

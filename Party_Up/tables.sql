@@ -80,15 +80,15 @@ INSERT INTO game (console_id, name)
     VALUES
     -- (NULL, 'destiny'),
 
-    (1, 'destiny'),
-    (2, 'destiny'),
-    (3, 'destiny'),
-    (1, 'borderlands'),
-    (2, 'borderlands'),
-    (3, 'borderlands'),
-    (1, 'call of duty'),
-    (2, 'call of duty'),
-    (3, 'call of duty');
+    (1, 'destiny-playstation'),
+    (2, 'destiny-xbox'),
+    (3, 'destiny-pc'),
+    (1, 'borderlands-playstation'),
+    (2, 'borderlands-xbox'),
+    (3, 'borderlands-pc'),
+    (1, 'call of duty-playstation'),
+    (2, 'call of duty-xbox'),
+    (3, 'call of duty-pc');
 
 create table game_activity (
     id int auto_increment primary key,
@@ -134,11 +134,11 @@ create table user_game (
 INSERT INTO user_game (user_id, game_id, active)
     VALUES 
     (1, 1, 1),
-    (1, 2, 0),
+    (1, 7, 0),
     (2, 1, 0),
-    (2, 3, 1),
+    (2, 4, 1),
     (3, 1, 1),
-    (3, 3, 0);
+    (3, 7, 0);
     -- (4, 1, 0),
     -- (4, 2, 0),
     -- (5, 3, 0),
