@@ -150,13 +150,15 @@ div.carousel-container {
     background-color: blue;
     margin: 10px 0px; }
     .list-container .media-object .graphic {
-      background-color: green;
-      height: 100px;
-      width: 100px;
-      float: left; }
+      /*background-color: green;*/
+      height: 135px;
+      width: 135px;
+      float: left;
+      background-image: url('/Images/octocat.jpeg');
+      background-size: 100% 100%; }
     .list-container .media-object .content {
       background-color: red;
-      margin-left: 105px;
+      margin-left: 140px;
       min-height: 100px; }
   h1 {
   text-align: center;

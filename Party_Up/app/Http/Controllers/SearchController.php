@@ -14,7 +14,15 @@ use Request;
 class SearchController extends Controller {
 
     public function view() {
-        
+        return view('search');
+    }
+
+    public function postSearch() {
+        return redirect('search_results');
+    }
+
+    public function results() {
+        return view('search_results');
     }
 
 

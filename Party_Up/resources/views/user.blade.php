@@ -28,9 +28,13 @@
             <div>
                 <form action="/user">
                     @foreach($games as $game)
+                        @if($game->id == $active_game) 
+                            <div>{{ $game->name }}</div>
+                            <div>Active: <input type="radio" name="active" value="{{ $game->id }}" checked></div>
+                        @endif
                         <div>{{ $game->name }}</div> 
                         <div>Active: <input type="radio" name="active" 
-                            value="{{ $game->user()->where('active', '=', '')->get() }}">
+                            value="{{ $game->id }}">
 
                         </div>
                     @endforeach

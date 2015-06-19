@@ -4,6 +4,7 @@ use App\User;
 use Auth;
 use Request;
 use App\Models\Game;
+use DB;
 
 
 /**********************************************
@@ -18,10 +19,13 @@ class UserController extends Controller {
             return redirect('auth/login');
         } 
         $user = Auth::user();
-
+        $id = Auth::user()->id;
         $games = $user->games;
+        $sql = 'SELECT game_id FROM user_game WHERE user_id = :id and active = 1'; 
+        $active_game = DB::select($sql, ['id' => $id]); 
+        
 
-        return view('user', ['user' => $user, 'games' => $games]);
+        return view('user', ['user' => $user, 'games' => $games, 'active_game' => $active_game]);
     }
 
     public function postActivityStatus($id) {
