@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="/css/main.css">
         <link href='http://fonts.googleapis.com/css?family=Play:400,700|Orbitron:400,500,700,900' 
             rel='stylesheet' type='text/css'>
+
     </head>
     <body>
         <div class="head-container">
@@ -14,7 +15,7 @@
                     <a href="/home" class="logo">Party-Up</a>
                     @if (Auth::check())
                         <a class="button" href="/search">Search Players</a>
-                        <a class="button" href="/archive">My Archive</a>
+                        <a class="button" href="/archive">Friends</a>
                         <a class="button" href="/user">My Account</a>
                         <a class="button" href="/auth/logout">Logout</a>
                     @endif
@@ -38,7 +39,8 @@
             are the property of Party-Up.com</span>
         </footer>
     </div>
-    <script src="my_assets/js/main.js"></script>
-    <script src="my_assets/js/slick.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="javascript/main.js"></script>
+    <script src="/slick/slick.js"></script>
 </body>
 </html>

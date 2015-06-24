@@ -13,7 +13,7 @@
         </div>
         @endif
 
-        <form action="{{ URL::to('user') }}/{{$user->id}}/edit" method="POST">
+        <form action="{{ URL::to('user') }}/{{$user->id}}/edit" method="POST" class="edit-user">
             <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>"> 
             <div><span>Region: </span><input type="text" name="region" value="{{ $user->region }}"></div>
             <div><span>Play Style: </span><input type="text" name="play_style" value="{{ $user->play_style }}"></div>

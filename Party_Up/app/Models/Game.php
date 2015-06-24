@@ -17,4 +17,9 @@ class Game extends Model {
     public function user() {
         return $this->belongsToMany('App\User', 'user_game');
     }
+
+    public function game_activities() {
+        // dd("fooooobar");
+        return $this->hasMany('App\Models\GameActivity');
+    }
 }

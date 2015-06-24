@@ -24,15 +24,15 @@ INSERT INTO user (username, email, password, date_of_birth, region, play_style)
     ('TheChurd', 'kyle@gmail,com', '$2y$10$7tX6sHaO6oamDigMmBsX/eXp7Xa9YbbD5maAHX2C1T3HdqWvdMh5u',
         '2001-01-15', 'usa', 'casual'),
     ('BlastCrater', 'antonio@gmail.com', '$2y$10$7tX6sHaO6oamDigMmBsX/eXp7Xa9YbbD5maAHX2C1T3HdqWvdMh5u', 
-        '1996-04-03', 'usa', 'hardcore');
-    -- ('LovelyEliza', 'liza@gmail.com', '$2y$10$7tX6sHaO6oamDigMmBsX/eXp7Xa9YbbD5maAHX2C1T3HdqWvdMh5u',
-    --     '1996-08-14', 'usa', 'hardcore'),
-    -- ('DiamondBiscuit', 'elaine@gmail.com', '$2y$10$7tX6sHaO6oamDigMmBsX/eXp7Xa9YbbD5maAHX2C1T3HdqWvdMh5u',
-    --     '1995-12-14', 'usa', 'casual'),
-    -- ('Johnmc2696', 'jon@gmail.com', '$2y$10$7tX6sHaO6oamDigMmBsX/eXp7Xa9YbbD5maAHX2C1T3HdqWvdMh5u',
-    --     '1996-07-26', 'usa', 'casual'),
-    -- ('Salehi21', 'sale@gmail.com', '$2y$10$7tX6sHaO6oamDigMmBsX/eXp7Xa9YbbD5maAHX2C1T3HdqWvdMh5u',
-    --     '1995-04-25', 'UAE', 'casual');
+        '1996-04-03', 'usa', 'hardcore'),
+    ('LovelyEliza', 'liza@gmail.com', '$2y$10$7tX6sHaO6oamDigMmBsX/eXp7Xa9YbbD5maAHX2C1T3HdqWvdMh5u',
+        '1997-08-14', 'usa', 'hardcore'),
+    ('DiamondBiscuit', 'elaine@gmail.com', '$2y$10$7tX6sHaO6oamDigMmBsX/eXp7Xa9YbbD5maAHX2C1T3HdqWvdMh5u',
+        '1995-12-14', 'usa', 'casual'),
+    ('Johnmc2696', 'jon@gmail.com', '$2y$10$7tX6sHaO6oamDigMmBsX/eXp7Xa9YbbD5maAHX2C1T3HdqWvdMh5u',
+        '1996-07-26', 'usa', 'casual'),
+    ('Salehi21', 'sale@gmail.com', '$2y$10$7tX6sHaO6oamDigMmBsX/eXp7Xa9YbbD5maAHX2C1T3HdqWvdMh5u',
+        '1995-04-25', 'uae', 'casual');
 
 create table friend (
     id int auto_increment primary key,
@@ -47,27 +47,27 @@ INSERT INTO friend (user_id, friend_user_id, date, friend_rating)
     (1, 2, '2001-01-15', 6),
     (1, 3, '2010-06-15', 10),
     (2, 1, '2001-01-15', 4),
-    (3, 1, '2010-06-15', 8);
-    -- (3, 4, '2014-12-20', 8),
-    -- (3, 5, '2010-11-13', 10),
-    -- (3, 7, '2015-05-20', 10);
-    -- (2, 6, '2011-04-24', 4),
-    -- (2, 4, '2001-01-15', 2),
-    -- (1, 4, '2013-02-23', 10),
-    -- (1, 5, '2010-11-13', 5),
-    -- (1, 6, '2009-12-14', 10),
-    -- (1, 7, '2015-05-20', 7),
-    -- (4, 1, '2013-02-23', 10),
-    -- (4, 2, '2013-05-20', 3),
-    -- (4, 3, '2014-12-20', 2),
-    -- (4, 6, '2013-03-23', 5),
-    -- (5, 1, '2010-11-13', 8),
-    -- (5, 3, '2010-11-13', 3),
-    -- (6, 1, '2009-12-14', 10),
-    -- (6, 2, '2011-04-24', 5),
-    -- (6, 4, '2013-03-23', 5),
-    -- (7, 1, '2015-05-20', 8),
---     (7, 3, '2015-05-20', 7);
+    (3, 1, '2010-06-15', 8),
+    (3, 4, '2014-12-20', 8),
+    (3, 5, '2010-11-13', 10),
+    (3, 7, '2015-05-20', 10),
+    (2, 6, '2011-04-24', 4),
+    (2, 4, '2001-01-15', 2),
+    (1, 4, '2013-02-23', 10),
+    (1, 5, '2010-11-13', 5),
+    (1, 6, '2009-12-14', 10),
+    (1, 7, '2015-05-20', 7),
+    (4, 1, '2013-02-23', 10),
+    (4, 2, '2013-05-20', 3),
+    (4, 3, '2014-12-20', 2),
+    (4, 6, '2013-03-23', 5),
+    (5, 1, '2010-11-13', 8),
+    (5, 3, '2010-11-13', 3),
+    (6, 1, '2009-12-14', 10),
+    (6, 2, '2011-04-24', 5),
+    (6, 4, '2013-03-23', 5),
+    (7, 1, '2015-05-20', 8),
+    (7, 3, '2015-05-20', 7);
 
 create table game (
     id int auto_increment primary key,
@@ -134,18 +134,18 @@ create table user_game (
 INSERT INTO user_game (user_id, game_id, active)
     VALUES 
     (1, 1, 1),
-    (1, 7, 0),
-    (2, 1, 0),
-    (2, 4, 0),
+    (1, 7, 1),
+    (2, 1, 1),
+    (2, 4, 1),
     (3, 1, 1),
-    (3, 7, 0);
-    -- (4, 1, 0),
-    -- (4, 2, 0),
-    -- (5, 3, 0),
-    -- (6, 1, 0),
-    -- (6, 2, 0),
-    -- (6, 3, 0),
-    -- (7, 1, 0);
+    (3, 7, 1),
+    (4, 1, 1),
+    (4, 2, 1),
+    (5, 3, 1),
+    (6, 1, 1),
+    (6, 2, 1),
+    (6, 3, 1),
+    (7, 1, 1);
 
 create table console (
     id int auto_increment primary key,
@@ -170,7 +170,7 @@ INSERT INTO console (name)
 **********************************************/
 
 
-SELECT datediff(now(), date_of_birth)/365 as age, username, game.name, console.name, 
+SELECT datediff(now(), date_of_birth)/365 as age, username, game.name, 
     play_style, region, game_activity.activity, user_game.active FROM
     user, game, user_game, game_activity 
     WHERE 
@@ -178,9 +178,9 @@ SELECT datediff(now(), date_of_birth)/365 as age, username, game.name, console.n
     game.id = user_game.game_id and
     game.id = game_activity.game_id and
     user_game.active = 1 and
-    game_activity.id = :activity and
+    game_activity.id = 2 and
     datediff(now(), date_of_birth)/365 >= 18 and
-    game.id = :game_id;
+    game.id = 1;
 
 
 /**********************************************

@@ -5,6 +5,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Auth\Passwords\CanResetPassword;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
+use Carbon\Carbon;
 
 
 class User extends Model implements AuthenticatableContract, CanResetPasswordContract {
@@ -36,6 +37,16 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
     // public function games() {
     //     return $this->hasMany('App\Models\Game');
     // }
+
+    public function getAge() {
+    	$dob = new Carbon($this->date_of_birth);
+    	$now = Carbon::now();
+    	$datediff = ($dob->diff($now)->days/365);
+    	return floor($datediff);
+
+
+    	//Carbon::createFromDate($this->date_of_birth);
+    }
 
 	public function games() {
 		return $this->belongsToMany('App\Models\Game', 'user_game');

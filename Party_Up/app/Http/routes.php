@@ -32,6 +32,7 @@ Route::post('games/{id}', 'UserController@postAddGames');
 Route::get('search', 'SearchController@view');
 Route::post('search', 'SearchController@postSearch');
 Route::get('search_results', 'SearchController@results');
+Route::get('/api/games/{game_id}/activities', 'SearchController@activities');
 
 /**********************************************
     Archived Players

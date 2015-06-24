@@ -2,7 +2,7 @@
 namespace App\Http\Controllers;
 use Auth;
 use App\Models\Friend;
-use App\Models\User;
+use App\User;
 use Request;
 
 class FriendController extends Controller {

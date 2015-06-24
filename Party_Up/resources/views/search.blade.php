@@ -2,13 +2,13 @@
 
 @section('content')
 
-<div class="form-container">
-    <div class="form">
-        <form action="{{ URL::to('search') }}" method="POST">
+<div class="form-container search">
+    <div class="form-search">
+        <form action="{{ URL::to('search') }}" method="POST" class="search">
             <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
             <div>
-                Game: <select name="game">
-                    <option value=""></option>
+                Game: <select name="game_id" class="game">
+                    <option></option>
                     <option value="1">Destiny-PSN</option>
                     <option value="2">Destiny-XBL</option>
                     <option value="3">Destiny-PC</option>
@@ -21,20 +21,20 @@
                 </select>
             </div>
             <div>
-                Activity: <select name="activity" id="">
-                    <option value=""></option>
-                    <option value="">Dependent on Game(AJAX)</option>
+                Activity: <select name="activity" class="activity-select">
+                    <option>Any</option>
+                    
                 </select>
             </div>
             <div>
                 Age: <select name="age">
-                    <option value=""></option>
+                    <option></option>
                     <option value="age">Adult(18 and up)</option>
                 </select>
             </div>
             <div>
                 Region: <select name="region">
-                    <option value=""></option>
+                    <option></option>
                     <option value="usa">USA</option>
                     <option value="china">China</option>
                     <option value="russia">Russia</option>
@@ -46,7 +46,7 @@
             </div>
             <div>
                 Play Style: <select name="play_style">
-                    <option value=""></option>
+                    <option></option>
                     <option value="casual">Casual</option>
                     <option value="hardcore">Hardcore</option>
                 </select>
