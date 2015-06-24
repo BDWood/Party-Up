@@ -1,7 +1,7 @@
 .list-container {
     min-height: 300px;
     width: 100%;
-    background-color: yellow;
+    background-color: #383544;
     overflow: hidden;
 
     main {
@@ -15,19 +15,22 @@
     }
 
     .media-object {
-        background-color: blue;
+        // background-color: blue;
         // overflow: hidden;
         margin: 10px 0px;
+        border: 1px solid black;
+        color: white;
     
         .graphic {
-            background-color: green;
+            background-image: url('octocat.jpeg');
+            background-size: cover;
             height: 100px;
             width: 100px;
             float: left;
         }
 
         .content {
-            background-color: red;
+            // background-color: red;
             margin-left: 105px;
             min-height: 100px;
 

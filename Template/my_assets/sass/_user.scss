@@ -1,26 +1,32 @@
 .content-container {
     display: flex;
     justify-content: center;
-    background-color: black;
-    min-height:800px;
+    background-color: #383544;
+    min-height: 600px;
 
     .user {
-        background-color: yellow;
+        // background-color: yellow;
         width: 80%;
         position: relative;
         overflow: hidden;
+        color: white;
 
 
         .profile-img {
-            background-color: blue;
             height: 200px;
             width: 200px;
             float: left;
+            background-image: url('octocat.jpeg');
+            background-size: cover;
             
+            img {
+            }    
         }
 
+
+
         .about-me {
-            background-color: red;
+            // background-color: red;
             margin: 20px 20px 20px 215px;
             display: block;
 
@@ -35,6 +41,14 @@
                 margin-top: 20px;
                 margin-left: 25px;
                 margin-right: 25px;
+            }
+
+            h1 {
+
+                span {
+                    color: #E25C43;
+
+                }
             }
 
         }

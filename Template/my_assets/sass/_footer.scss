@@ -1,5 +1,5 @@
 div.foot-container {
-    background-color: purple;
+    background-color: black;
     height: 80px;
     width: 100%;
     display: flex;
@@ -13,18 +13,19 @@ div.foot-container {
         flex-direction: row;
         align-items: center;
         position: relative;
-        background: white;
+        color: white;
         bottom: 0;
 
         .copyright {
             margin-right: 20px;
+            margin-bottom: 10px
 
         }
 
         .contact {
             position: absolute;
             right: 10px;
-            top: 18px;
+            top: 17px;
         }
 
         .disclaimer {

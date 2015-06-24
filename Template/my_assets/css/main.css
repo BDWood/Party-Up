@@ -22,13 +22,12 @@ a.button {
 
 @extends a.button;
 div.head-container {
-  background-color: orange;
+  background-color: #212121;
   width: 100%;
-  height: 100px; }
+  height: 70px; }
   div.head-container header {
     margin: 0 auto;
     height: 100px;
-    background-color: green;
     width: 80%; }
     div.head-container header nav {
       height: 100%;
@@ -37,18 +36,25 @@ div.head-container {
       align-items: center;
       justify-content: space-between; }
       div.head-container header nav .logo {
-        margin-top: .15em;
+        margin-bottom: .55em;
         font-family: 'Orbitron', 'Arial', 'Serif';
         font-weight: 900;
         font-size: 3.5em;
-        color: black;
-        text-decoration: none;
-        background-color: blue; }
+        color: white;
+        text-decoration: none; }
+      div.head-container header nav span {
+        font-size: 1.7em;
+        font-weight: 600;
+        color: #E25C43; }
       div.head-container header nav a {
-        display: inline-block; }
+        display: inline-block;
+        margin-bottom: 1.7em;
+        color: white;
+        background-color: #212121;
+        border: 0 solid #212121; }
 
 div.foot-container {
-  background-color: purple;
+  background-color: black;
   height: 80px;
   width: 100%;
   display: flex;
@@ -61,14 +67,15 @@ div.foot-container {
     flex-direction: row;
     align-items: center;
     position: relative;
-    background: white;
+    color: white;
     bottom: 0; }
     div.foot-container footer .copyright {
-      margin-right: 20px; }
+      margin-right: 20px;
+      margin-bottom: 10px; }
     div.foot-container footer .contact {
       position: absolute;
       right: 10px;
-      top: 18px; }
+      top: 17px; }
     div.foot-container footer .disclaimer {
       font-size: .6em;
       position: absolute;
@@ -78,102 +85,112 @@ div.foot-container {
 div.carousel-container {
   height: 450px;
   width: 100%;
-  background-color: purple; }
+  background-color: #323544; }
   div.carousel-container .carousel {
     height: 100%;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.5);
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; }
+    justify-content: center;
+    background-image: url("destiny.jpg");
+    background-size: cover; }
   div.carousel-container h1 {
     margin: 0;
-    text-align: center; }
+    text-align: center;
+    color: white; }
   div.carousel-container .carousel-content {
-    background-color: cyan; }
+    color: white; }
     div.carousel-container .carousel-content > * {
       display: block;
       margin: 15px; }
   div.carousel-container div.buttons {
     text-align: center; }
     div.carousel-container div.buttons .button {
-      margin-top: 10em; }
+      margin-top: 10em;
+      color: white;
+      background-color: #323544;
+      border-color: white; }
 
 .about-container {
   width: 100%;
-  background-color: green;
+  background-color: #525567;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: relative; }
+  position: relative;
+  min-height: 400px;
+  border: 4px solid black; }
   .about-container .about {
     width: 80%;
-    background-color: yellow; }
+    color: white;
+    background-color: #525567; }
     .about-container .about .content-container {
       display: flex;
       flex-direction: row;
-      background-color: teal; }
+      background-color: #525567; }
       .about-container .about .content-container .content {
         flex: 1;
         position: relative; }
         .about-container .about .content-container .content p {
           position: absolute;
-          top: 90px;
-          left: 80px;
-          right: 80px;
-          background-color: gray; }
+          top: 40px;
+          left: 50px;
+          right: 50px;
+          background-color: #525567; }
       .about-container .about .content-container .images {
         display: flex;
         flex-direction: column; }
         .about-container .about .content-container .images img {
           width: 200px;
           height: 150px;
-          background-color: blue; }
+          background-image: url("borderlands.jpeg");
+          background-size: cover; }
   .about-container h1 {
-    background-color: orange;
+    background-color: #525567;
     display: block;
-    margin: 0; }
+    margin-top: 30px; }
 
 .list-container {
   min-height: 300px;
   width: 100%;
-  background-color: yellow;
+  background-color: #383544;
   overflow: hidden; }
   .list-container main {
     width: 80%;
     margin: auto; }
   .list-container .media-object {
-    background-color: blue;
-    margin: 10px 0px; }
+    margin: 10px 0px;
+    border: 1px solid black;
+    color: white; }
     .list-container .media-object .graphic {
-      background-color: green;
+      background-image: url("octocat.jpeg");
+      background-size: cover;
       height: 100px;
       width: 100px;
       float: left; }
     .list-container .media-object .content {
-      background-color: red;
       margin-left: 105px;
       min-height: 100px; }
 
 .content-container {
   display: flex;
   justify-content: center;
-  background-color: black;
-  min-height: 800px; }
+  background-color: #383544;
+  min-height: 600px; }
   .content-container .user {
-    background-color: yellow;
     width: 80%;
     position: relative;
-    overflow: hidden; }
+    overflow: hidden;
+    color: white; }
     .content-container .user .profile-img {
-      background-color: blue;
       height: 200px;
       width: 200px;
-      float: left; }
+      float: left;
+      background-image: url("octocat.jpeg");
+      background-size: cover; }
     .content-container .user .about-me {
-      background-color: red;
       margin: 20px 20px 20px 215px;
       display: block; }
       .content-container .user .about-me div.bio {
@@ -181,3 +198,5 @@ div.carousel-container {
         margin-top: 20px;
         margin-left: 25px;
         margin-right: 25px; }
+      .content-container .user .about-me h1 span {
+        color: #E25C43; }
